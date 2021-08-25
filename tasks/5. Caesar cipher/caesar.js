@@ -16,10 +16,9 @@ export function encryptCaesar(inputString, key) {
       //Character wrap to encode Z(90) from A(65) for encryption
       if (enCharCode > 90) {
         enCharCode = (enCharCode) % 90 + 64;
-      };
-
+      }
       //Character wrap to encode A(65) from Z(90) for decryption
-      if (enCharCode < 65) {
+      else if (enCharCode < 65) {
         enCharCode = (enCharCode) % 64 + 90;
       };
 
