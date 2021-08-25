@@ -1,5 +1,5 @@
 export function isPalindrome(inputString) {
-  if (inputString === "palindrome")
-    return true;
-  return false;
+  
+  return inputString === inputString.split('').reverse().join('');
+
 }

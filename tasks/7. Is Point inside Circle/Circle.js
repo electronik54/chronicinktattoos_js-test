@@ -1,6 +1,6 @@
 import Point from './Point';
 
-export default function(center, radius) {
+export default function (center, radius) {
   return {
     center,
     radius,
@@ -12,6 +12,12 @@ export default function(center, radius) {
     },
     includes(Point) {
       // TODO: write your code here
+
+      const xSq = (Point.x - center.x),
+        ySq = (Point.y - center.y);
+
+      return (xSq * xSq + ySq * ySq) <= radius ** radius;
+
     }
   }
 }
